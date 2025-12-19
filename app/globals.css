@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Instrument+Serif:ital,wght@0,400;1,400&family=Playfair+Display:wght@400;500;600;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  font-family: 'Geist', sans-serif;
+  color: var(--foreground);
+  background: var(--background);
+}
+
+.font-serif { 
+  font-family: 'Instrument Serif', serif; 
+}
+
+.font-instrument-serif { 
+  font-family: 'Instrument Serif', serif; 
+}
+
+.font-geist { 
+  font-family: 'Geist', sans-serif; 
+}
+
+.font-playfair { 
+  font-family: 'Playfair Display', serif; 
+}
+
+html { 
+  scroll-behavior: smooth; 
+}
+
+.tracking-display { 
+  letter-spacing: -0.04em; 
+}
+
+.tracking-ultra-tight { 
+  letter-spacing: -0.05em; 
+}
+
+
