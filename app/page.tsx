@@ -20,7 +20,7 @@ export default function HomePage() {
               Welcome to Rizq Sistas
             </span>
             
-            <h1 className="lg:text-7xl xl:text-8xl leading-[0.9] text-7xl font-normal text-[#F2F4EF] tracking-tight font-instrument-serif mb-10">
+            <h1 className="lg:text-6xl xl:text-7xl leading-[0.9] text-7xl font-normal text-[#F2F4EF] tracking-tight font-instrument-serif mb-10">
               Learn Strategy.<br />
               Trust Provision.<br />
               <span className="italic text-[#8f9e85] pr-2">Build Together.</span>
