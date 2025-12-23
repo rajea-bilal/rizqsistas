@@ -1,22 +1,26 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Calendar, BookOpen, Users, MapPin, ChevronRight, ChevronDown, PenTool, Twitter, Instagram, Youtube } from 'lucide-react';
+import UpcomingEventsSection from './_components/UpcomingEventsSection';
 
 export default function CommunityPage() {
   return (
     <div className="bg-[#050505] text-white antialiased font-geist selection:bg-white selection:text-black overflow-x-hidden">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-md border-b border-white/5 bg-black/50">
-        <div className="max-w-[1400px] mx-auto px-6 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-1">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-8 py-3 flex items-center justify-between">
+          <div className="flex items-center gap-3">
             {/* Logo */}
-            <Image 
-              src="/logo/logo.png" 
-              alt="Rizq Sistas Logo" 
-              width={48} 
-              height={48} 
-              className="w-12 h-12"
-            />
+            <Link href="/" className="flex items-center">
+              <Image 
+                src="/logo/logo.png" 
+                alt="Rizq Sistas Logo" 
+                width={48} 
+                height={48} 
+                className="w-12 h-12"
+              />
+            </Link>
           </div>
           
           <div className="hidden md:flex items-center gap-6 text-sm text-zinc-400 font-medium">
@@ -82,34 +86,34 @@ export default function CommunityPage() {
             
             {/* Image 1: Top Right */}
             <div className="absolute top-0 right-0 w-48 h-64 rounded-xl overflow-hidden shadow-2xl border border-white/10 rotate-2 hover:rotate-0 transition-transform duration-500 hover:z-20">
-              <img src="https://via.placeholder.com/400x600/333/fff?text=Community" className="w-full h-full object-cover" alt="Community" />
+              <Image src="/images/sessions/sistas.jpeg" className="w-full h-full object-cover" alt="Rizq Sistas Community" width={400} height={600} />
             </div>
 
             {/* Image 2: Center Left */}
             <div className="absolute top-12 left-10 w-56 h-40 rounded-xl overflow-hidden shadow-2xl border border-white/10 -rotate-3 hover:rotate-0 transition-transform duration-500 hover:z-20">
-              <img src="https://via.placeholder.com/400x300/444/fff?text=Meeting" className="w-full h-full object-cover" alt="Meeting" />
+              <Image src="/images/sessions/foundations-of-wealth.jpeg" className="w-full h-full object-cover" alt="Learning Session" width={400} height={300} />
             </div>
 
             {/* Image 3: Center */}
             <div className="absolute top-32 left-1/3 w-40 h-52 rounded-xl overflow-hidden shadow-2xl border border-white/10 rotate-6 hover:rotate-0 transition-transform duration-500 z-10">
-              <img src="https://via.placeholder.com/400x500/555/fff?text=Discussion" className="w-full h-full object-cover" alt="Discussion" />
+              <Image src="/images/sessions/circle.jpeg" className="w-full h-full object-cover" alt="Circle Discussion" width={400} height={500} />
             </div>
 
             {/* Image 4: Bottom Right */}
             <div className="absolute bottom-10 right-12 w-64 h-40 rounded-xl overflow-hidden shadow-2xl border border-white/10 -rotate-2 hover:rotate-0 transition-transform duration-500 hover:z-20">
-              <img src="https://via.placeholder.com/600x400/666/fff?text=Presentation" className="w-full h-full object-cover" alt="Presentation" />
+              <Image src="/images/sessions/markets.jpeg" className="w-full h-full object-cover" alt="Financial Learning" width={600} height={400} />
             </div>
 
             {/* Image 5: Bottom Left */}
             <div className="absolute bottom-0 left-0 w-48 h-48 rounded-xl overflow-hidden shadow-2xl border border-white/10 rotate-3 hover:rotate-0 transition-transform duration-500 hover:z-20">
-              <img src="https://via.placeholder.com/400x400/777/fff?text=Workspace" className="w-full h-full object-cover" alt="Workspace" />
+              <Image src="/images/approach/tools-for-action.jpeg" className="w-full h-full object-cover" alt="Tools and Resources" width={400} height={400} />
             </div>
           </div>
           {/* Mobile Fallback for Images */}
           <div className="lg:hidden flex overflow-x-auto gap-4 pb-4 snap-x">
-            <img src="https://via.placeholder.com/400x300/333/fff?text=Community" className="w-64 h-48 object-cover rounded-xl snap-center border border-white/10" alt="Community" />
-            <img src="https://via.placeholder.com/400x300/444/fff?text=Meeting" className="w-64 h-48 object-cover rounded-xl snap-center border border-white/10" alt="Meeting" />
-            <img src="https://via.placeholder.com/400x300/555/fff?text=Presentation" className="w-64 h-48 object-cover rounded-xl snap-center border border-white/10" alt="Presentation" />
+            <Image src="/images/sessions/sistas.jpeg" className="w-64 h-48 object-cover rounded-xl snap-center border border-white/10" alt="Rizq Sistas Community" width={400} height={300} />
+            <Image src="/images/sessions/foundations-of-wealth.jpeg" className="w-64 h-48 object-cover rounded-xl snap-center border border-white/10" alt="Learning Session" width={400} height={300} />
+            <Image src="/images/sessions/markets.jpeg" className="w-64 h-48 object-cover rounded-xl snap-center border border-white/10" alt="Financial Learning" width={400} height={300} />
           </div>
 
         </div>
@@ -130,7 +134,7 @@ export default function CommunityPage() {
           {/* Card 1 */}
           <div className="group cursor-pointer">
             <div className="aspect-[4/3] w-full rounded-2xl overflow-hidden mb-6 border border-white/10 relative">
-              <img src="https://via.placeholder.com/800x600/333/fff?text=Circle+Conversations" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Circle Conversations" />
+              <Image src="/images/sessions/circle.jpeg" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Circle Conversations" width={800} height={600} />
             </div>
             <h3 className="text-xl font-medium text-white mb-2">Circle Conversations</h3>
             <p className="text-zinc-400 text-base leading-relaxed">
@@ -141,7 +145,7 @@ export default function CommunityPage() {
           {/* Card 2 */}
           <div className="group cursor-pointer">
             <div className="aspect-[4/3] w-full rounded-2xl overflow-hidden mb-6 border border-white/10 relative">
-              <img src="https://via.placeholder.com/800x600/444/fff?text=Learning+Sessions" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Learning Sessions" />
+              <Image src="/images/sessions/foundations-of-wealth.jpeg" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Learning Sessions" width={800} height={600} />
             </div>
             <h3 className="text-xl font-medium text-white mb-2">Learning Sessions</h3>
             <p className="text-zinc-400 text-base leading-relaxed">
@@ -152,7 +156,7 @@ export default function CommunityPage() {
           {/* Card 3 */}
           <div className="group cursor-pointer">
             <div className="aspect-[4/3] w-full rounded-2xl overflow-hidden mb-6 border border-white/10 relative">
-              <img src="https://via.placeholder.com/800x600/555/fff?text=Guest+Conversations" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Guest Conversations" />
+              <Image src="/images/sessions/markets.jpeg" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Guest Conversations" width={800} height={600} />
             </div>
             <h3 className="text-xl font-medium text-white mb-2">Guest Conversations</h3>
             <p className="text-zinc-400 text-base leading-relaxed">
@@ -184,7 +188,7 @@ export default function CommunityPage() {
           {/* Support Item 1 */}
           <div className="group">
             <div className="aspect-[16/9] w-full rounded-2xl overflow-hidden mb-5 border border-white/10">
-              <img src="https://via.placeholder.com/800x450/333/fff?text=Resources" className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" alt="Resources" />
+              <Image src="/images/approach/tools-for-action.jpeg" className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" alt="Resources" width={800} height={450} />
             </div>
             <h3 className="text-lg font-medium text-white mb-1">Free resources for hosts</h3>
             <p className="text-zinc-400 text-base">Access discussion prompts, facilitation guides, and community principles to help you host with confidence.</p>
@@ -193,7 +197,7 @@ export default function CommunityPage() {
           {/* Support Item 2 */}
           <div className="group">
             <div className="aspect-[16/9] w-full rounded-2xl overflow-hidden mb-5 border border-white/10">
-              <img src="https://via.placeholder.com/800x450/444/fff?text=Guidance" className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" alt="Guidance" />
+              <Image src="/images/approach/image01.jpg" className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" alt="Guidance" width={800} height={450} />
             </div>
             <h3 className="text-lg font-medium text-white mb-1">Guidance & planning support</h3>
             <p className="text-zinc-400 text-base">From setting the tone to structuring sessions, we help you create gatherings that feel purposeful and welcoming.</p>
@@ -202,7 +206,7 @@ export default function CommunityPage() {
           {/* Support Item 3 */}
           <div className="group">
             <div className="aspect-[16/9] w-full rounded-2xl overflow-hidden mb-5 border border-white/10">
-              <img src="https://via.placeholder.com/800x450/555/fff?text=Community+Standards" className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" alt="Community Standards" />
+              <Image src="/images/sessions/rizq-circle.jpeg" className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" alt="Community Standards" width={800} height={450} />
             </div>
             <h3 className="text-lg font-medium text-white mb-1">Community standards</h3>
             <p className="text-zinc-400 text-base">All gatherings are rooted in adab, trust, and shared values — ensuring safe, respectful spaces for learning and growth.</p>
@@ -211,125 +215,8 @@ export default function CommunityPage() {
         </div>
       </section>
 
-      {/* Section: Upcoming Gatherings */}
-      <section className="py-24 md:py-32 px-6 max-w-[1000px] mx-auto">
-        <div className="text-center mb-20 relative">
-          <h2 className="font-instrument-serif text-5xl md:text-7xl lg:text-8xl tracking-tight text-white relative z-10">
-            Upcoming <br />
-            Gatherings
-          </h2>
-          <div className="absolute -top-10 left-1/2 -translate-x-1/2 text-8xl md:text-9xl font-instrument-serif text-white/5 whitespace-nowrap blur-sm pointer-events-none select-none">
-            Gatherings
-          </div>
-          <p className="text-zinc-400 text-lg mt-8 relative z-10">
-            Join an upcoming Rizq Sistas circle — hosted by women in your city or online.
-          </p>
-        </div>
-
-        <div className="space-y-4">
-          
-          {/* Event Card 1 */}
-          <div className="bg-[#0f0f0f] border border-white/5 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row gap-8 hover:border-white/20 transition-colors group">
-            <div className="flex-1">
-              <div className="text-zinc-500 text-sm font-medium mb-3 flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-green-500"></span>
-                14 Jan 2026 Wednesday
-              </div>
-              
-              <h3 className="text-2xl font-instrument-serif mb-4 group-hover:text-zinc-200 transition-colors">Framer Meetups x Baku</h3>
-              
-              <div className="flex items-center gap-4 mb-6">
-                <div className="flex -space-x-2">
-                  <img src="https://via.placeholder.com/100x100/666/fff?text=U" className="w-8 h-8 rounded-full border-2 border-[#0f0f0f]" alt="" />
-                  <img src="https://via.placeholder.com/100x100/777/fff?text=S" className="w-8 h-8 rounded-full border-2 border-[#0f0f0f]" alt="" />
-                </div>
-                <div className="text-sm text-zinc-400">By Ulvin Omarov, Framer & Shelg Allahyarli</div>
-              </div>
-              
-              <div className="flex items-center gap-2 text-zinc-500 text-sm">
-                <MapPin className="w-4 h-4" />
-                Genjlik Plaza
-              </div>
-              
-              <div className="mt-4 inline-block px-2 py-0.5 rounded bg-green-900/30 text-green-400 text-[10px] font-mono tracking-wide uppercase">
-                AZN 25
-              </div>
-            </div>
-            
-            <div className="w-full md:w-48 aspect-video rounded-lg overflow-hidden relative">
-              <img src="https://via.placeholder.com/400x225/333/fff?text=Baku" className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" alt="Baku" />
-              <div className="absolute bottom-2 left-2 font-bold text-white text-lg">Baku</div>
-            </div>
-          </div>
-
-          {/* Event Card 2 */}
-          <div className="bg-[#0f0f0f] border border-white/5 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row gap-8 hover:border-white/20 transition-colors group">
-            <div className="flex-1">
-              <div className="text-zinc-500 text-sm font-medium mb-3 flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-orange-500"></span>
-                14 Jan 2026 Wednesday
-              </div>
-              
-              <div className="text-xs font-mono text-orange-400 mb-2">17:30 - 19:30 GMT-5</div>
-              <h3 className="text-2xl font-instrument-serif mb-4 group-hover:text-zinc-200 transition-colors">Design Space: Framer x Scylla x Station DC</h3>
-              
-              <div className="flex items-center gap-4 mb-6">
-                <div className="flex -space-x-2">
-                  <img src="https://via.placeholder.com/100x100/888/fff?text=M" className="w-8 h-8 rounded-full border-2 border-[#0f0f0f]" alt="" />
-                  <img src="https://via.placeholder.com/100x100/999/fff?text=G" className="w-8 h-8 rounded-full border-2 border-[#0f0f0f]" alt="" />
-                </div>
-                <div className="text-sm text-zinc-400">By Mark Pennypacker, Gretchen Lee...</div>
-              </div>
-              
-              <div className="flex items-center gap-2 text-zinc-500 text-sm">
-                <MapPin className="w-4 h-4" />
-                Washington, District of Columbia
-              </div>
-            </div>
-            
-            <div className="w-full md:w-48 aspect-video rounded-lg overflow-hidden relative">
-              <img src="https://via.placeholder.com/400x225/444/fff?text=DC" className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" alt="DC" />
-              <div className="absolute bottom-2 left-2 font-bold text-white text-lg leading-none">Design<br />Space</div>
-            </div>
-          </div>
-
-          {/* Event Card 3 */}
-          <div className="bg-[#0f0f0f] border border-white/5 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row gap-8 hover:border-white/20 transition-colors group">
-            <div className="flex-1">
-              <div className="text-zinc-500 text-sm font-medium mb-3 flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-yellow-500"></span>
-                24 Jan 2026 Saturday
-              </div>
-              
-              <div className="text-xs font-mono text-yellow-400 mb-2">15:00 - 18:00 CET</div>
-              <h3 className="text-2xl font-instrument-serif mb-4 group-hover:text-zinc-200 transition-colors">Framer x Katowice</h3>
-              
-              <div className="flex items-center gap-4 mb-6">
-                <div className="flex -space-x-2">
-                  <img src="https://via.placeholder.com/100x100/aaa/fff?text=K" className="w-8 h-8 rounded-full border-2 border-[#0f0f0f]" alt="" />
-                </div>
-                <div className="text-sm text-zinc-400">By Karolina Hess & Framer</div>
-              </div>
-              
-              <div className="flex items-center gap-2 text-zinc-500 text-sm">
-                <MapPin className="w-4 h-4" />
-                Katowice International Conference Centre
-              </div>
-            </div>
-            
-            <div className="w-full md:w-48 aspect-video rounded-lg overflow-hidden relative">
-              <img src="https://via.placeholder.com/400x225/555/fff?text=Katowice" className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" alt="Katowice" />
-              <div className="absolute bottom-2 left-2 font-bold text-white text-lg">Katowice</div>
-            </div>
-          </div>
-
-          <div className="flex justify-center pt-8">
-            <a href="#" className="inline-flex items-center gap-2 text-sm text-zinc-400 hover:text-white transition-colors">
-              Browse all <ChevronRight className="w-4 h-4" />
-            </a>
-          </div>
-        </div>
-      </section>
+      {/* Luma Events Integration */}
+      <UpcomingEventsSection />
 
       {/* Footer / Apply Section */}
       <section className="relative mt-20 border-t border-white/10 bg-[#050505] overflow-hidden">
@@ -341,30 +228,30 @@ export default function CommunityPage() {
             
             {/* Column 1 */}
             <div className="flex flex-col gap-6 -mt-10">
-              <img src="https://via.placeholder.com/600x640/333/fff?text=Img1" className="w-full h-64 object-cover rounded-xl bg-zinc-800" alt="" />
-              <img src="https://via.placeholder.com/600x480/444/fff?text=Img2" className="w-full h-48 object-cover rounded-xl bg-zinc-800" alt="" />
-              <img src="https://via.placeholder.com/600x640/555/fff?text=Img3" className="w-full h-64 object-cover rounded-xl bg-zinc-800" alt="" />
+              <Image src="/images/sessions/sistas.jpeg" className="w-full h-64 object-cover rounded-xl bg-zinc-800" alt="" width={600} height={640} />
+              <Image src="/images/sessions/foundations-of-wealth.jpeg" className="w-full h-48 object-cover rounded-xl bg-zinc-800" alt="" width={600} height={480} />
+              <Image src="/images/sessions/circle.jpeg" className="w-full h-64 object-cover rounded-xl bg-zinc-800" alt="" width={600} height={640} />
             </div>
             
             {/* Column 2 */}
             <div className="flex flex-col gap-6 md:pt-16">
-              <img src="https://via.placeholder.com/600x560/666/fff?text=Img4" className="w-full h-56 object-cover rounded-xl bg-zinc-800" alt="" />
-              <img src="https://via.placeholder.com/600x720/777/fff?text=Img5" className="w-full h-72 object-cover rounded-xl bg-zinc-800" alt="" />
-              <img src="https://via.placeholder.com/600x480/888/fff?text=Img6" className="w-full h-48 object-cover rounded-xl bg-zinc-800" alt="" />
+              <Image src="/images/sessions/markets.jpeg" className="w-full h-56 object-cover rounded-xl bg-zinc-800" alt="" width={600} height={560} />
+              <Image src="/images/approach/tools-for-action.jpeg" className="w-full h-72 object-cover rounded-xl bg-zinc-800" alt="" width={600} height={720} />
+              <Image src="/images/sessions/rizq-circle.jpeg" className="w-full h-48 object-cover rounded-xl bg-zinc-800" alt="" width={600} height={480} />
             </div>
 
             {/* Column 3 */}
             <div className="flex flex-col gap-6 -mt-8 hidden md:flex">
-              <img src="https://via.placeholder.com/600x640/999/fff?text=Img7" className="w-full h-64 object-cover rounded-xl bg-zinc-800" alt="" />
-              <img src="https://via.placeholder.com/600x560/aaa/fff?text=Img8" className="w-full h-56 object-cover rounded-xl bg-zinc-800" alt="" />
-              <img src="https://via.placeholder.com/600x640/bbb/fff?text=Img9" className="w-full h-64 object-cover rounded-xl bg-zinc-800" alt="" />
+              <Image src="/images/approach/image01.jpg" className="w-full h-64 object-cover rounded-xl bg-zinc-800" alt="" width={600} height={640} />
+              <Image src="/images/hero/backs.jpg" className="w-full h-56 object-cover rounded-xl bg-zinc-800" alt="" width={600} height={560} />
+              <Image src="/images/hero/hike.jpg" className="w-full h-64 object-cover rounded-xl bg-zinc-800" alt="" width={600} height={640} />
             </div>
 
             {/* Column 4 */}
             <div className="flex flex-col gap-6 md:pt-12 hidden md:flex">
-              <img src="https://via.placeholder.com/600x600/ccc/fff?text=Img10" className="w-full h-60 object-cover rounded-xl bg-zinc-800" alt="" />
-              <img src="https://via.placeholder.com/600x640/ddd/fff?text=Img11" className="w-full h-64 object-cover rounded-xl bg-zinc-800" alt="" />
-              <img src="https://via.placeholder.com/600x560/eee/fff?text=Img12" className="w-full h-56 object-cover rounded-xl bg-zinc-800" alt="" />
+              <Image src="/images/sessions/sistas.jpeg" className="w-full h-60 object-cover rounded-xl bg-zinc-800" alt="" width={600} height={600} />
+              <Image src="/images/sessions/foundations-of-wealth.jpeg" className="w-full h-64 object-cover rounded-xl bg-zinc-800" alt="" width={600} height={640} />
+              <Image src="/images/sessions/circle.jpeg" className="w-full h-56 object-cover rounded-xl bg-zinc-800" alt="" width={600} height={560} />
             </div>
           </div>
           
@@ -381,8 +268,8 @@ export default function CommunityPage() {
             <div className="mb-6">
               <PenTool className="w-6 h-6 text-white mb-4" />
               <h3 className="text-2xl font-medium text-white mb-2">Host a Rizq Sistas Gathering</h3>
-              <p className="text-zinc-400 text-sm mb-2">If you feel called to bring women together in your city or community, we'd love to support you.</p>
-              <p className="text-zinc-400 text-sm">You don't need to be an expert — just grounded, intentional, and committed to creating space for growth.</p>
+              <p className="text-zinc-400 text-sm mb-2">If you feel called to bring women together in your city or community, we&apos;d love to support you.</p>
+              <p className="text-zinc-400 text-sm">You don&apos;t need to be an expert — just grounded, intentional, and committed to creating space for growth.</p>
             </div>
 
             <form className="space-y-4">

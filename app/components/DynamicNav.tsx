@@ -26,16 +26,18 @@ export default function DynamicNav() {
       }`}
     >
       <div className="flex items-center gap-3">
-        <Image 
-          src="/logo/logo.png" 
-          alt="Rizq Sistas Logo" 
-          width={48} 
-          height={48} 
-          className="w-12 h-12"
-        />
-        <span className="font-medium tracking-tight text-lg hidden md:block">
-          <Link href="/">Rizq Sistas</Link>
-        </span>
+        <Link href="/" className="flex items-center gap-3">
+          <Image 
+            src={isScrolled ? "/logo/logo-dark.png" : "/logo/logo.png"}
+            alt="Rizq Sistas Logo" 
+            width={48} 
+            height={48} 
+            className="w-12 h-12 transition-opacity duration-500"
+          />
+          <span className="font-medium tracking-tight text-lg hidden md:block">
+            Rizq Sistas
+          </span>
+        </Link>
       </div>
       
       <nav className="hidden md:flex space-x-8 text-[11px] font-semibold tracking-[0.2em] uppercase">
@@ -72,7 +74,7 @@ export default function DynamicNav() {
       </nav>
       
       <Link 
-        href="#" 
+        href="/community" 
         className="text-[11px] font-medium tracking-[0.2em] uppercase flex items-center gap-2 group text-[#C25E30]"
       >
         Join Rizq Sistas

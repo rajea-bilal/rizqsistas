@@ -31,10 +31,10 @@ export default function HomePage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-8">
-              <Link href="#" className="inline-flex items-center text-[10px] uppercase hover:opacity-70 transition-opacity font-medium text-[#F2F4EF] tracking-[0.2em] border-[#C25E30] border-b pb-1">
+              <Link href="/community" className="inline-flex items-center text-[10px] uppercase hover:opacity-70 transition-opacity font-medium text-[#F2F4EF] tracking-[0.2em] border-[#C25E30] border-b pb-1">
                 Join the Community
               </Link>
-              <Link href="#" className="inline-flex items-center text-[10px] font-medium uppercase tracking-[0.2em] text-[#8F9E85] hover:text-[#F2F4EF] transition-colors">
+              <Link href="/community" className="inline-flex items-center text-[10px] font-medium uppercase tracking-[0.2em] text-[#8F9E85] hover:text-[#F2F4EF] transition-colors">
                 Explore Events
               </Link>
             </div>
@@ -228,14 +228,26 @@ export default function HomePage() {
           {/* Large Tablet Image */}
           <div className="col-span-1 lg:col-span-5 relative">
             <div className="bg-neutral-100 aspect-[3/4] overflow-hidden">
-              <Image src="https://via.placeholder.com/800x600/f0f0f0/666?text=Digital+Tools" className="w-full h-full object-cover grayscale" alt="Digital tools" width={800} height={600} />
+              <Image
+                src="/images/approach/tools-for-action.jpeg"
+                className="w-full h-full object-cover grayscale"
+                alt="Digital tools"
+                width={800}
+                height={600}
+              />
             </div>
           </div>
           
           {/* Middle Gap/Content */}
           <div className="col-span-1 lg:col-span-3">
             <div className="bg-neutral-100 aspect-[3/4] overflow-hidden">
-              <Image src="https://via.placeholder.com/800x600/f0f0f0/666?text=Office+Space" className="w-full h-full object-cover grayscale" alt="Office space" width={800} height={600} />
+              <Image
+                src="/images/wallpaper/rizq-wallpaper.png"
+                className="w-full h-full object-cover opacity-90"
+                alt="Rizq Sistas pattern"
+                width={800}
+                height={600}
+              />
             </div>
           </div>
 
@@ -252,7 +264,7 @@ export default function HomePage() {
             <div className="mt-auto">
               <span className="text-[10px] uppercase tracking-[0.25em] text-neutral-400 mb-6 block">Our Mission</span>
               <p className="md:text-3xl leading-relaxed text-2xl font-light italic text-neutral-500 tracking-tight font-geist">
-                "Rizq Sistas exists to help you steward your wealth with clarity, confidence, and faith."
+                &ldquo;Rizq Sistas exists to help you steward your wealth with clarity, confidence, and faith.&rdquo;
               </p>
             </div>
           </div>
@@ -309,7 +321,7 @@ export default function HomePage() {
             <div className="flex justify-between items-start gap-6">
               <div className="">
                 <span className="text-[10px] text-neutral-400 uppercase tracking-widest mb-3 block">Planning</span>
-                <h4 className="leading-tight text-2xl font-normal text-neutral-600 tracking-tighter font-geist">Practical Budgeting Methods That Won't Break</h4>
+                <h4 className="leading-tight text-2xl font-normal text-neutral-600 tracking-tighter font-geist">Practical Budgeting Methods That Won&apos;t Break</h4>
               </div>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-neutral-400 mt-1">
                 <path d="M7 7h10v10"></path>
