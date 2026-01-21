@@ -46,7 +46,7 @@ export default function CommunityPage() {
           
           {/* Left: Typography & Content */}
           <div className="space-y-10 z-10 relative">
-            <h1 className="font-instrument-serif text-6xl md:text-7xl lg:text-8xl leading-[0.9] tracking-tight text-[#F6F1EB]">
+            <h1 className="font-playfair text-6xl md:text-7xl lg:text-8xl leading-[0.9] tracking-tight text-[#F6F1EB]">
               Build Rizq. <br />
               <span className="text-zinc-400">Together.</span>
             </h1>
@@ -122,7 +122,7 @@ export default function CommunityPage() {
       {/* Section: Ways to gather */}
       <section className="py-24 md:py-32 px-6 max-w-[1400px] mx-auto border-t border-white/5">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-          <h2 className="font-instrument-serif text-4xl md:text-5xl lg:text-6xl tracking-tight leading-none">
+          <h2 className="font-playfair text-4xl md:text-5xl lg:text-6xl tracking-tight leading-none">
             Ways to gather
           </h2>
           <a href="#" className="inline-flex items-center justify-center text-xs font-medium border border-zinc-700 bg-zinc-900 rounded-full px-4 py-1.5 hover:bg-zinc-800 transition-colors">
@@ -170,7 +170,7 @@ export default function CommunityPage() {
       <section className="py-24 md:py-32 px-6 max-w-[1400px] mx-auto border-t border-white/5">
         <div className="flex flex-col md:flex-row md:items-start justify-between mb-16 gap-6">
           <div>
-            <h2 className="font-instrument-serif text-4xl md:text-5xl lg:text-6xl tracking-tight leading-none mb-6">
+            <h2 className="font-playfair text-4xl md:text-5xl lg:text-6xl tracking-tight leading-none mb-6">
               Support for <br />
               Rizq Sistas Hosts
             </h2>

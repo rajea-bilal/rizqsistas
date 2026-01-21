@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import DynamicNav from "./components/DynamicNav";
+import WorkshopStrands from "./components/WorkshopStrands";
 
 export default function HomePage() {
   return (
@@ -16,18 +17,25 @@ export default function HomePage() {
           
           {/* Content */}
           <div className="relative z-10 w-full">
-            <span className="text-[9px] uppercase block font-medium text-[#C25E30] tracking-[0.3em] border-[#C25E30]/30 border-l mb-12 pl-3">
-              Welcome to Rizq Sistas
-            </span>
-            
-            <h1 className="lg:text-6xl xl:text-7xl leading-[0.9] text-7xl font-normal text-[#F2F4EF] tracking-tight font-instrument-serif mb-10">
-              Learn Strategy.<br />
-              Trust Provision.<br />
-              <span className="italic text-[#8f9e85] pr-2">Build Together.</span>
+            <h1 className="lg:text-6xl xl:text-7xl leading-[0.9] text-7xl font-normal text-[#F2F4EF] tracking-tight font-playfair mb-8">
+              Rizq Sistas
             </h1>
             
-            <p className="text-sm font-light text-[#F2F4EF]/80 leading-[2] mb-14 max-w-md">
-              Rizq Sistas is a community turning financial planning into practical action. We learn, invest, and steward our wealth side by side, grounded in faith.
+            <p className="text-xl md:text-2xl font-light text-[#8f9e85] leading-[1.4] mb-10 max-w-md font-playfair italic">
+              Guiding women to care for and grow their provision with faith, clarity, and intention.
+            </p>
+            
+            <div className="space-y-4 mb-12 max-w-md">
+              <p className="text-sm font-light text-[#F2F4EF]/70 leading-[1.9]">
+                Rizq Sistas is a global platform supporting Muslim women to steward their rizq across money, wellbeing, work, and life direction.
+              </p>
+              <p className="text-sm font-light text-[#F2F4EF]/70 leading-[1.9]">
+                We focus on readiness and decision-making — helping women build the clarity, stability, and confidence required to take aligned financial, professional, and personal steps.
+              </p>
+            </div>
+
+            <p className="text-[10px] uppercase tracking-[0.3em] text-[#C25E30] font-medium mb-10">
+              Educate. Connect. Prepare.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-8">
@@ -53,104 +61,294 @@ export default function HomePage() {
       </section>
 
       {/* Philosophy / Manifesto Section */}
-      <section className="lg:px-12 pt-32 pr-6 pb-32 pl-6">
-        <div className="flex flex-col text-center max-w-screen-xl mr-auto ml-auto items-center">
-          <div className="flex items-center gap-4 mb-12">
-            <span className="text-[10px] uppercase tracking-[0.25em] font-medium text-[#C25E30]">Our Philosophy</span>
-            <div className="h-[1px] w-12 bg-neutral-300"></div>
+      <section id="why-we-exist" className="lg:px-12 pt-32 pr-6 pb-32 pl-6">
+        <div className="max-w-screen-xl mx-auto">
+          {/* Header */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-20">
+            <div className="lg:col-span-5">
+              <span className="text-[10px] uppercase tracking-[0.25em] font-medium text-[#C25E30] mb-6 block">The Gap We Address</span>
+              <h2 className="text-5xl md:text-6xl lg:text-7xl leading-[1.05] font-normal text-neutral-900 tracking-tight font-playfair">
+                Why Rizq Sistas<br /><span className="italic text-neutral-400">Exists</span>
+              </h2>
+            </div>
+            <div className="lg:col-span-7 flex items-end">
+              <p className="text-base font-light text-neutral-600 leading-[1.9] max-w-xl lg:ml-auto">
+                Muslim women are highly engaged in education, work, and community, yet remain under-supported when navigating financial decisions, career transitions, and long-term planning.
+              </p>
+            </div>
           </div>
-          
-          <h2 className="md:text-7xl lg:text-8xl leading-[1.1] text-5xl font-normal text-neutral-900 tracking-tight font-instrument-serif max-w-6xl mb-16">
-            Your Rizq is written.<br /><span className="text-neutral-400 italic">Your effort is required.</span>
-          </h2>
-          
-          <div className="max-w-xl mx-auto space-y-8">
-            <p className="leading-[1.9] text-base font-light text-neutral-600">
-              Spiritual trust and financial strategy go hand in hand. We reject the idea that ambition contradicts devotion. At Rizq Sistas, we provide the practical tools to steward your provision responsibly.
-            </p>
-            <p className="leading-[1.9] text-base font-light text-neutral-600">
-              No vague advice. Just a clear path forward, supported by women who are doing the work to grow together, not apart.
-            </p>
-            <div className="pt-8">
-              <Link href="#" className="text-[10px] uppercase tracking-[0.25em] border-b border-neutral-300 pb-1 hover:border-neutral-900 transition-colors">Read the Manifesto</Link>
+
+          {/* Content */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            {/* Left: What they lack */}
+            <div className="lg:col-span-5">
+              <div className="border-l-2 border-[#C25E30]/30 pl-6 space-y-4">
+                <p className="leading-[1.9] text-base font-light text-neutral-600 mb-2">
+                  Many are active earners or builders, but lack:
+                </p>
+                <p className="leading-[1.9] text-base font-light text-neutral-500">trusted spaces to reflect and plan</p>
+                <p className="leading-[1.9] text-base font-light text-neutral-500">structured guidance before major decisions</p>
+                <p className="leading-[1.9] text-base font-light text-neutral-500">support that aligns faith, wellbeing, and responsibility</p>
+              </div>
+            </div>
+
+            {/* Right: Contrast + closing */}
+            <div className="lg:col-span-7 space-y-12">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <p className="text-[10px] uppercase tracking-[0.2em] text-neutral-400 mb-3">Most platforms</p>
+                  <p className="leading-[1.9] text-base font-light text-neutral-500">Prioritise speed and outcomes.</p>
+                </div>
+                <div>
+                  <p className="text-[10px] uppercase tracking-[0.2em] text-[#C25E30] mb-3">Rizq Sistas</p>
+                  <p className="leading-[1.9] text-base font-light text-neutral-700">Prioritises alignment, readiness, and sustainability.</p>
+                </div>
+              </div>
+
+              <div className="border-t border-neutral-200 pt-10">
+                <p className="leading-[1.6] text-xl font-light text-neutral-700 italic font-playfair max-w-lg">
+                  We exist to support women in stewarding their rizq — as provision across income, capacity, health, time, and direction.
+                </p>
+                <div className="pt-8">
+                  <Link href="#" className="text-[10px] uppercase tracking-[0.25em] border-b border-neutral-300 pb-1 hover:border-neutral-900 transition-colors">Read the Manifesto</Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Value Proposition */}
-      <section className="lg:px-12 bg-[#f6f1eb] border-neutral-100 border-t pt-12 pr-6 pb-12 pl-6">
-        <div className="flex font-instrument-serif mb-24 items-end justify-between">
-          <span className="text-4xl italic text-neutral-700 tracking-tight">The Rizq Sistas Approach</span>
-          <Link href="#" className="text-[10px] uppercase tracking-[0.2em] border-b border-transparent hover:border-neutral-900 pb-0.5 transition-colors">Join Us</Link>
+      {/* What We Do Section */}
+      <section id="what-we-do" className="lg:px-12 bg-[#1A2118] pt-24 pr-6 pb-32 pl-6 relative overflow-hidden">
+        {/* Subtle gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#2F3A25]/50 to-transparent"></div>
+        
+        <div className="relative z-10 max-w-screen-xl mx-auto">
+          {/* Header */}
+          <div className="mb-16">
+            <span className="text-[10px] uppercase tracking-[0.25em] font-medium text-[#C25E30] mb-6 block">What We Do</span>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+              <div className="lg:col-span-7">
+                <h2 className="text-4xl md:text-5xl lg:text-6xl leading-[1.1] font-normal text-[#F2F4EF] tracking-tight font-playfair">
+                  Supporting informed,<br /><span className="italic text-[#8f9e85]">faith-aligned</span> decisions
+                </h2>
+              </div>
+              <div className="lg:col-span-5">
+                <p className="text-base font-light text-[#F2F4EF]/70 leading-[1.9]">
+                  Rizq Sistas does not rush women into programmes, products, or prescribed paths.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* We support women to... */}
+          <div className="mb-16">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="h-[1px] w-8 bg-[#8f9e85]/40"></div>
+              <p className="text-[10px] uppercase tracking-[0.25em] text-[#8f9e85]">We support women to</p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {/* Card 1 */}
+              <div className="group border border-[#8f9e85]/20 p-6 hover:border-[#C25E30]/40 transition-colors">
+                <span className="text-3xl font-light text-[#C25E30]/40 font-geist mb-4 block">01</span>
+                <p className="text-sm font-light text-[#F2F4EF] leading-relaxed">
+                  Assess their current position with honesty and clarity
+                </p>
+              </div>
+              
+              {/* Card 2 */}
+              <div className="group border border-[#8f9e85]/20 p-6 hover:border-[#C25E30]/40 transition-colors">
+                <span className="text-3xl font-light text-[#C25E30]/40 font-geist mb-4 block">02</span>
+                <p className="text-sm font-light text-[#F2F4EF] leading-relaxed">
+                  Understand their relationship with money, work, time, and responsibility
+                </p>
+              </div>
+              
+              {/* Card 3 */}
+              <div className="group border border-[#8f9e85]/20 p-6 hover:border-[#C25E30]/40 transition-colors">
+                <span className="text-3xl font-light text-[#C25E30]/40 font-geist mb-4 block">03</span>
+                <p className="text-sm font-light text-[#F2F4EF] leading-relaxed">
+                  Identify risks, constraints, and opportunities before committing
+                </p>
+              </div>
+              
+              {/* Card 4 */}
+              <div className="group border border-[#8f9e85]/20 p-6 hover:border-[#C25E30]/40 transition-colors">
+                <span className="text-3xl font-light text-[#C25E30]/40 font-geist mb-4 block">04</span>
+                <p className="text-sm font-light text-[#F2F4EF] leading-relaxed">
+                  Make considered, faith-aligned decisions that can be sustained
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Closing statement */}
+          <div className="border-t border-[#8f9e85]/20 pt-12">
+            <p className="text-xl md:text-2xl font-light text-[#F2F4EF]/90 leading-relaxed max-w-3xl font-playfair italic">
+              This preparatory work strengthens outcomes across finance, career, entrepreneurship, and wellbeing.
+            </p>
+          </div>
         </div>
+      </section>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-24">
-          {/* Value 1 */}
-          <div className="group cursor-pointer">
-            <div className="aspect-[4/3] bg-neutral-100 mb-10 overflow-hidden relative">
-              <Image src="https://via.placeholder.com/800x600/f0f0f0/666?text=Education" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale opacity-90" alt="Education" width={800} height={600} />
+      {/* Our Approach - How We Work */}
+      <section id="our-approach" className="lg:px-12 bg-[#f6f1eb] pt-32 pr-6 pb-24 pl-6">
+        <div className="max-w-screen-xl mx-auto">
+          {/* Section Header */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-20">
+            <div className="lg:col-span-5">
+              <span className="text-[10px] uppercase tracking-[0.25em] font-medium text-[#C25E30] mb-6 block">Our Approach</span>
+              <h2 className="text-5xl md:text-6xl leading-[1.05] font-normal text-neutral-800 tracking-tight font-playfair">
+                How we <span className="italic text-neutral-500">work</span>
+              </h2>
             </div>
-            <h3 className="lg:text-4xl text-3xl font-normal text-neutral-700 tracking-tighter font-geist mb-4">Practical Halal Literacy</h3>
-            <p className="text-sm font-light text-neutral-500 leading-loose max-w-sm">Clear, actionable lessons on budgeting and investing that align with your values and daily life.</p>
           </div>
 
-          {/* Value 2 */}
-          <div className="group cursor-pointer md:mt-20">
-            <div className="aspect-[4/3] bg-neutral-100 mb-10 overflow-hidden relative">
-              <Image src="/images/approach/image01.jpg" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale opacity-90" alt="Community" width={800} height={600} />
+          {/* Three Principles */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+            {/* Principle 1 */}
+            <div className="border-t border-neutral-300 pt-8">
+              <span className="text-[10px] uppercase tracking-[0.2em] text-neutral-400 mb-6 block">01</span>
+              <h3 className="text-2xl font-normal text-neutral-800 tracking-tight font-geist mb-4">Readiness & Alignment</h3>
+              <p className="text-sm font-light text-neutral-500 leading-[1.9]">
+                We focus on emotional, spiritual, and practical readiness as a prerequisite for effective decision-making.
+              </p>
             </div>
-            <h3 className="lg:text-4xl text-3xl font-normal text-neutral-700 tracking-tighter font-geist mb-4">The Rizq Sistas Circle</h3>
-            <p className="text-sm font-light text-neutral-500 leading-loose max-w-sm">Real conversations about money. No judgment, just shared growth and accountability with women who get it.</p>
+
+            {/* Principle 2 */}
+            <div className="border-t border-neutral-300 pt-8">
+              <span className="text-[10px] uppercase tracking-[0.2em] text-neutral-400 mb-6 block">02</span>
+              <h3 className="text-2xl font-normal text-neutral-800 tracking-tight font-geist mb-4">Guided Pathways</h3>
+              <p className="text-sm font-light text-neutral-500 leading-[1.9]">
+                Women are supported through structured workshops, tools, and facilitated sessions that prioritise clarity over urgency.
+              </p>
+            </div>
+
+            {/* Principle 3 */}
+            <div className="border-t border-neutral-300 pt-8">
+              <span className="text-[10px] uppercase tracking-[0.2em] text-neutral-400 mb-6 block">03</span>
+              <h3 className="text-2xl font-normal text-neutral-800 tracking-tight font-geist mb-4">Community & Environment</h3>
+              <p className="text-sm font-light text-neutral-500 leading-[1.9]">
+                We convene women in focused settings — from small circles to retreats — designed to support reflection, accountability, and long-term thinking.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What We Offer */}
+      <section id="what-we-offer" className="lg:px-12 bg-white pt-24 pr-6 pb-32 pl-6">
+        <div className="max-w-screen-xl mx-auto">
+          {/* Section Header */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-16">
+            <div className="lg:col-span-5">
+              <span className="text-[10px] uppercase tracking-[0.25em] font-medium text-[#C25E30] mb-6 block">What We Offer</span>
+              <h2 className="text-4xl md:text-5xl leading-[1.1] font-normal text-neutral-800 tracking-tight font-playfair">
+                Structured support,<br /><span className="italic text-neutral-400">delivered thoughtfully</span>
+              </h2>
+            </div>
           </div>
 
-          {/* Value 3 */}
-          <div className="group cursor-pointer">
-            <div className="aspect-[4/3] bg-neutral-100 mb-10 overflow-hidden relative">
-              <Image src="/images/approach/tools-for-action.jpeg" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale opacity-90" alt="Tools" width={800} height={600} />
-            </div>
-            <h3 className="lg:text-4xl text-3xl font-normal text-neutral-700 tracking-tighter font-geist mb-4">Tools for Action</h3>
-            <p className="text-sm font-light text-neutral-500 leading-loose max-w-sm">Spreadsheets, checklists, and frameworks you can use today to manage the provision you have been given.</p>
-          </div>
+          {/* Offerings List */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16">
+            {/* Left Column */}
+            <div className="space-y-0">
+              {/* Offering 1 */}
+              <div className="border-t border-neutral-200 py-10 group">
+                <div className="flex items-start justify-between gap-6">
+                  <div className="flex-1">
+                    <h3 className="text-xl font-normal text-neutral-800 tracking-tight font-geist mb-3 group-hover:text-[#C25E30] transition-colors">
+                      Readiness Workshops
+                    </h3>
+                    <p className="text-sm font-light text-neutral-500 leading-[1.9] max-w-md">
+                      Online and in-person sessions focused on financial, professional, and life decision-making.
+                    </p>
+                  </div>
+                  <span className="text-[10px] text-neutral-300 tracking-widest mt-1">01</span>
+                </div>
+              </div>
 
-          {/* Value 4 */}
-          <div className="group cursor-pointer md:mt-20">
-            <div className="aspect-[4/3] bg-neutral-100 mb-10 overflow-hidden relative">
-              <Image src="/images/sessions/sistas.jpeg" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale opacity-90" alt="Network" width={800} height={600} />
+              {/* Offering 2 */}
+              <div className="border-t border-neutral-200 py-10 group">
+                <div className="flex items-start justify-between gap-6">
+                  <div className="flex-1">
+                    <h3 className="text-xl font-normal text-neutral-800 tracking-tight font-geist mb-3 group-hover:text-[#C25E30] transition-colors">
+                      Tools & Frameworks
+                    </h3>
+                    <p className="text-sm font-light text-neutral-500 leading-[1.9] max-w-md">
+                      Practical diagnostics, planners, and reflection tools that support assessment, planning, and follow-through.
+                    </p>
+                  </div>
+                  <span className="text-[10px] text-neutral-300 tracking-widest mt-1">02</span>
+                </div>
+              </div>
+
+              {/* Offering 3 */}
+              <div className="border-t border-neutral-200 py-10 group">
+                <div className="flex items-start justify-between gap-6">
+                  <div className="flex-1">
+                    <h3 className="text-xl font-normal text-neutral-800 tracking-tight font-geist mb-3 group-hover:text-[#C25E30] transition-colors">
+                      Community Circles
+                    </h3>
+                    <p className="text-sm font-light text-neutral-500 leading-[1.9] max-w-md">
+                      Facilitated spaces for discussion, shared learning, and accountability within a women-only environment.
+                    </p>
+                  </div>
+                  <span className="text-[10px] text-neutral-300 tracking-widest mt-1">03</span>
+                </div>
+              </div>
             </div>
-            <h3 className="lg:text-4xl text-3xl font-normal text-neutral-700 tracking-tighter font-geist mb-4">Collective Growth</h3>
-            <p className="text-sm font-light text-neutral-500 leading-loose max-w-sm">Opportunities multiply when we build together. Connect with partners and mentors who share your ethics.</p>
+
+            {/* Right Column */}
+            <div className="space-y-0">
+              {/* Offering 4 */}
+              <div className="border-t border-neutral-200 py-10 group lg:border-t">
+                <div className="flex items-start justify-between gap-6">
+                  <div className="flex-1">
+                    <h3 className="text-xl font-normal text-neutral-800 tracking-tight font-geist mb-3 group-hover:text-[#C25E30] transition-colors">
+                      Retreats & Residential Experiences
+                    </h3>
+                    <p className="text-sm font-light text-neutral-500 leading-[1.9] max-w-md">
+                      UK-based and international retreats that provide structured time for reflection, recalibration, and strategic thinking — supported by nature and guided facilitation.
+                    </p>
+                  </div>
+                  <span className="text-[10px] text-neutral-300 tracking-widest mt-1">04</span>
+                </div>
+              </div>
+
+              {/* Offering 5 */}
+              <div className="border-t border-neutral-200 py-10 group">
+                <div className="flex items-start justify-between gap-6">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3 mb-3">
+                      <h3 className="text-xl font-normal text-neutral-800 tracking-tight font-geist group-hover:text-[#C25E30] transition-colors">
+                        Curated Learning
+                      </h3>
+                      <span className="text-[9px] uppercase tracking-widest text-[#C25E30] border border-[#C25E30]/30 px-2 py-0.5">Coming Soon</span>
+                    </div>
+                    <p className="text-sm font-light text-neutral-500 leading-[1.9] max-w-md">
+                      Access to trusted specialists and educators, introduced at appropriate stages rather than all at once.
+                    </p>
+                  </div>
+                  <span className="text-[10px] text-neutral-300 tracking-widest mt-1">05</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Upcoming Events */}
-      <section className="lg:px-12 bg-[#F8F8F8] mt-12 pt-24 pr-6 pb-24 pl-6">
+      <section id="events" className="lg:px-12 bg-[#F8F8F8] mt-12 pt-24 pr-6 pb-24 pl-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-24 border-b border-neutral-200 pb-12">
           <div className="col-span-1 lg:col-span-7">
-            <h2 className="lg:text-8xl leading-[0.9] text-6xl font-normal text-neutral-800 tracking-tight font-instrument-serif">
+            <h2 className="lg:text-8xl leading-[0.9] text-6xl font-normal text-neutral-800 tracking-tight font-playfair">
               Join Rizq Sistas<span className="block italic text-neutral-400">Live & Online</span>
             </h2>
           </div>
           <div className="col-span-1 lg:col-span-5 flex flex-col justify-end">
-            <div className="text-right text-[10px] uppercase tracking-[0.25em] text-neutral-500 mb-8">Workshops + Meetups</div>
-            
-            <div className="border-t border-neutral-300 py-6 flex justify-between items-center group cursor-pointer">
-              <span className="group-hover:text-neutral-900 transition-colors text-2xl font-normal text-neutral-500 font-geist">Halal Investing 101</span>
-              <span className="text-[10px] text-neutral-400 font-sans tracking-widest">01</span>
-            </div>
-            <div className="flex group cursor-pointer border-neutral-300 border-t pt-6 pb-6 items-center justify-between">
-              <span className="group-hover:text-neutral-900 transition-colors text-2xl font-normal text-neutral-500 font-geist">Debt Elimination Strategy</span>
-              <span className="text-[10px] text-neutral-400 font-sans tracking-widest">02</span>
-            </div>
-            <div className="border-t border-neutral-300 py-6 flex justify-between items-center group cursor-pointer">
-              <span className="group-hover:text-neutral-900 transition-colors text-2xl text-neutral-500 font-geist">Entrepreneurship & Barakah</span>
-              <span className="text-[10px] text-neutral-400 font-sans tracking-widest">03</span>
-            </div>
-            <div className="border-t border-neutral-300 py-6 flex justify-between items-center group cursor-pointer">
-              <span className="group-hover:text-neutral-900 transition-colors text-2xl font-normal text-neutral-500 font-geist">Rizq Sistas Networking</span>
-              <span className="text-[10px] text-neutral-400 font-sans tracking-widest">04</span>
-            </div>
+            <WorkshopStrands />
           </div>
         </div>
 
@@ -252,18 +450,10 @@ export default function HomePage() {
           </div>
 
           {/* Right Content Stack */}
-          <div className="col-span-1 lg:col-span-4 flex flex-col h-full gap-x-12 gap-y-12 justify-between">
-            <div className="flex justify-end">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8 text-neutral-800 stroke-[1]">
-                <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"></path>
-                <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"></path>
-                <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"></path>
-              </svg>
-            </div>
-            
-            <div className="mt-auto">
-              <span className="text-[10px] uppercase tracking-[0.25em] text-neutral-400 mb-6 block">Our Mission</span>
-              <p className="md:text-3xl leading-relaxed text-2xl font-light italic text-neutral-500 tracking-tight font-geist">
+          <div className="col-span-1 lg:col-span-4 flex flex-col h-full justify-end">
+            <div>
+              <span className="text-[10px] uppercase tracking-[0.25em] text-neutral-400 mb-4 block">Our Mission</span>
+              <p className="text-base md:text-lg leading-relaxed font-light italic text-neutral-500 font-geist">
                 &ldquo;Rizq Sistas exists to help you steward your wealth with clarity, confidence, and faith.&rdquo;
               </p>
             </div>
@@ -272,9 +462,9 @@ export default function HomePage() {
       </section>
 
       {/* Blog Section */}
-      <section className="lg:px-12 border-neutral-100 border-t pt-12 pr-6 pb-12 pl-6">
+      <section id="resources" className="lg:px-12 border-neutral-100 border-t pt-12 pr-6 pb-12 pl-6">
         <div className="flex mb-20 items-end justify-between">
-          <span className="text-4xl italic text-neutral-700 tracking-tight font-instrument-serif">Latest Resources</span>
+          <span className="text-4xl italic text-neutral-700 tracking-tight font-playfair">Latest Resources</span>
           <Link href="#" className="text-[10px] uppercase tracking-[0.2em] border-b border-transparent hover:border-neutral-900 pb-0.5 transition-colors">See More</Link>
         </div>
 
@@ -338,45 +528,51 @@ export default function HomePage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-12 lg:gap-8 mb-40 max-w-[1800px] mx-auto">
           {/* Left Text */}
           <div className="lg:col-span-4 pr-12">
-            <p className="text-sm font-light text-[#F2F4EF]/80 leading-relaxed max-w-[320px]">
-              Giving you the tools for both worlds.<br />—<br />
-              Designing, building, and growing financial futures for ambitious women worldwide.
+            <p className="text-[10px] uppercase tracking-[0.3em] text-[#C25E30] font-medium mb-4">
+              Educate. Connect. Prepare.
+            </p>
+            <p className="text-base font-light text-[#F2F4EF]/80 italic font-playfair mb-4">
+              Stewarding rizq, together.
+            </p>
+            <p className="text-xs text-[#F2F4EF]/50">
+              UK-founded · Global community
             </p>
           </div>
           
           {/* Links Cols */}
           <div className="lg:col-span-2">
-            <h5 className="text-[11px] uppercase tracking-widest text-[#C25E30] mb-8">Company</h5>
+            <h5 className="text-[11px] uppercase tracking-widest text-[#C25E30] mb-8">About</h5>
             <ul className="space-y-3">
-              <li className=""><Link href="#" className="text-sm font-light text-[#F2F4EF]/70 hover:text-[#F2F4EF] transition-colors">About us</Link></li>
-              <li><Link href="#" className="text-sm font-light text-[#F2F4EF]/70 hover:text-[#F2F4EF] transition-colors">Work</Link></li>
-              <li className=""><Link href="#" className="text-sm font-light text-[#F2F4EF]/70 hover:text-[#F2F4EF] transition-colors">Book a Call</Link></li>
-              <li className=""><Link href="#" className="text-sm font-light text-[#F2F4EF]/70 hover:text-[#F2F4EF] transition-colors">Contact</Link></li>
+              <li><Link href="#why-we-exist" className="text-sm font-light text-[#F2F4EF]/70 hover:text-[#F2F4EF] transition-colors">Why We Exist</Link></li>
+              <li><Link href="#our-approach" className="text-sm font-light text-[#F2F4EF]/70 hover:text-[#F2F4EF] transition-colors">Our Approach</Link></li>
+              <li><Link href="#what-we-offer" className="text-sm font-light text-[#F2F4EF]/70 hover:text-[#F2F4EF] transition-colors">What We Offer</Link></li>
+              <li><Link href="#events" className="text-sm font-light text-[#F2F4EF]/70 hover:text-[#F2F4EF] transition-colors">Contact</Link></li>
             </ul>
           </div>
           <div className="lg:col-span-2">
-            <h5 className="text-[11px] uppercase tracking-widest text-[#C25E30] mb-8">Services</h5>
+            <h5 className="text-[11px] uppercase tracking-widest text-[#C25E30] mb-8">Workshop Strands</h5>
             <ul className="space-y-3">
-              <li className=""><Link href="#" className="text-sm font-light text-[#F2F4EF]/70 hover:text-[#F2F4EF] transition-colors">Halal Investing</Link></li>
-              <li className=""><Link href="#" className="text-sm font-light text-[#F2F4EF]/70 hover:text-[#F2F4EF] transition-colors">Financial Planning</Link></li>
-              <li className=""><Link href="#" className="text-sm font-light text-[#F2F4EF]/70 hover:text-[#F2F4EF] transition-colors">Debt Management</Link></li>
-              <li className=""><Link href="#" className="text-sm font-light text-[#F2F4EF]/70 hover:text-[#F2F4EF] transition-colors">Community</Link></li>
+              <li><Link href="#events" className="text-sm font-light text-[#F2F4EF]/70 hover:text-[#F2F4EF] transition-colors">Financial Foundations</Link></li>
+              <li><Link href="#events" className="text-sm font-light text-[#F2F4EF]/70 hover:text-[#F2F4EF] transition-colors">Halal Investing 101</Link></li>
+              <li><Link href="#events" className="text-sm font-light text-[#F2F4EF]/70 hover:text-[#F2F4EF] transition-colors">Barakah-Led Entrepreneurship</Link></li>
+              <li><Link href="#events" className="text-sm font-light text-[#F2F4EF]/70 hover:text-[#F2F4EF] transition-colors">Community & Network</Link></li>
             </ul>
           </div>
           <div className="lg:col-span-2">
-            <h5 className="text-[11px] uppercase tracking-widest text-[#C25E30] mb-8">Work</h5>
+            <h5 className="text-[11px] uppercase tracking-widest text-[#C25E30] mb-8">What We Offer</h5>
             <ul className="space-y-3">
-              <li className=""><Link href="#" className="text-sm font-light text-[#F2F4EF]/70 hover:text-[#F2F4EF] transition-colors">Case Studies</Link></li>
-              <li className=""><Link href="#" className="text-sm font-light text-[#F2F4EF]/70 hover:text-[#F2F4EF] transition-colors">Testimonials</Link></li>
-              <li className=""><Link href="#" className="text-sm font-light text-[#F2F4EF]/70 hover:text-[#F2F4EF] transition-colors">Impact Report</Link></li>
+              <li><Link href="#what-we-offer" className="text-sm font-light text-[#F2F4EF]/70 hover:text-[#F2F4EF] transition-colors">Readiness Workshops</Link></li>
+              <li><Link href="#what-we-offer" className="text-sm font-light text-[#F2F4EF]/70 hover:text-[#F2F4EF] transition-colors">Tools & Frameworks</Link></li>
+              <li><Link href="#what-we-offer" className="text-sm font-light text-[#F2F4EF]/70 hover:text-[#F2F4EF] transition-colors">Community Circles</Link></li>
+              <li><Link href="#what-we-offer" className="text-sm font-light text-[#F2F4EF]/70 hover:text-[#F2F4EF] transition-colors">Retreats & Experiences</Link></li>
             </ul>
           </div>
           <div className="lg:col-span-2">
-            <h5 className="text-[11px] uppercase tracking-widest text-[#C25E30] mb-8">Resources</h5>
+            <h5 className="text-[11px] uppercase tracking-widest text-[#C25E30] mb-8">Connect</h5>
             <ul className="space-y-3">
-              <li className=""><Link href="#" className="text-sm font-light text-[#F2F4EF]/70 hover:text-[#F2F4EF] transition-colors">Blog</Link></li>
-              <li className=""><Link href="#" className="text-sm font-light text-[#F2F4EF]/70 hover:text-[#F2F4EF] transition-colors">Calculators</Link></li>
-              <li className=""><Link href="#" className="text-sm font-light text-[#F2F4EF]/70 hover:text-[#F2F4EF] transition-colors">Podcast (Coming)</Link></li>
+              <li><Link href="#events" className="text-sm font-light text-[#F2F4EF]/70 hover:text-[#F2F4EF] transition-colors">Events</Link></li>
+              <li><Link href="/community" className="text-sm font-light text-[#F2F4EF]/70 hover:text-[#F2F4EF] transition-colors">Join Community</Link></li>
+              <li><Link href="#resources" className="text-sm font-light text-[#F2F4EF]/70 hover:text-[#F2F4EF] transition-colors">Resources</Link></li>
             </ul>
           </div>
         </div>
@@ -389,21 +585,19 @@ export default function HomePage() {
         </div>
     
         {/* Divider & Bottom */}
-        <div className="max-w-[1800px] mx-auto border-t border-[#8F9E85]/20 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className="max-w-[1800px] mx-auto border-t border-[#8F9E85]/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex gap-8">
             <Link href="#" className="text-xs text-[#F2F4EF]/60 hover:text-[#F2F4EF]">Privacy Policy</Link>
             <Link href="#" className="text-xs text-[#F2F4EF]/60 hover:text-[#F2F4EF]">Terms of Use</Link>
           </div>
           <div className="text-xs text-[#F2F4EF]/60">
-            © 2024 Rizq Sistas. All rights reserved.
+            © Rizq Sistas
           </div>
-          <div className="flex gap-10">
+          <div className="flex gap-8">
             <Link href="#" className="text-xs text-[#F2F4EF]/60 hover:text-[#F2F4EF]">Facebook</Link>
             <Link href="#" className="text-xs text-[#F2F4EF]/60 hover:text-[#F2F4EF]">Twitter</Link>
-            <Link href="#" className="text-xs text-[#F2F4EF]/60 hover:text-[#F2F4EF]">Linkedin</Link>
+            <Link href="#" className="text-xs text-[#F2F4EF]/60 hover:text-[#F2F4EF]">LinkedIn</Link>
             <Link href="#" className="text-xs text-[#F2F4EF]/60 hover:text-[#F2F4EF]">Instagram</Link>
-            <Link href="#" className="text-xs text-[#F2F4EF]/60 hover:text-[#F2F4EF]">Dribbble</Link>
-            <Link href="#" className="text-xs text-[#F2F4EF]/60 hover:text-[#F2F4EF]">Layers</Link>
           </div>
         </div>
       </footer>

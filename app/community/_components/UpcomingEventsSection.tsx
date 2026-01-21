@@ -4,7 +4,7 @@ export default function UpcomingEventsSection() {
   return (
     <section className="py-24 md:py-32 px-6 max-w-[1000px] mx-auto">
       <div className="text-center mb-8">
-        <h2 className="font-instrument-serif text-4xl md:text-5xl tracking-tight text-white mb-4">
+        <h2 className="font-playfair text-4xl md:text-5xl tracking-tight text-white mb-4">
           Upcoming Events
         </h2>
         <p className="text-zinc-400 leading-relaxed max-w-xl mx-auto">
