@@ -52,7 +52,7 @@ export default function DynamicNav() {
           Team
         </Link>
         <Link 
-          href="#" 
+          href="#our-approach" 
           className={`pb-1 transition-all duration-200 ${
             isScrolled 
               ? 'hover:text-black hover:border-b hover:border-neutral-300' 
@@ -62,14 +62,14 @@ export default function DynamicNav() {
           Values
         </Link>
         <Link 
-          href="#" 
+          href="/community" 
           className={`pb-1 transition-all duration-200 ${
             isScrolled 
               ? 'hover:text-black hover:border-b hover:border-neutral-300' 
               : 'hover:text-white hover:border-b hover:border-white/30'
           }`}
         >
-          Events
+          Community
         </Link>
       </nav>
       

@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Calendar, BookOpen, Users, MapPin, ChevronRight, ChevronDown, PenTool, Twitter, Instagram, Youtube } from 'lucide-react';
+import { Calendar, BookOpen, Users, ChevronDown, PenTool } from 'lucide-react';
 import UpcomingEventsSection from './_components/UpcomingEventsSection';
 
 export default function CommunityPage() {
@@ -23,19 +23,10 @@ export default function CommunityPage() {
             </Link>
           </div>
           
-          <div className="hidden md:flex items-center gap-6 text-sm text-zinc-400 font-medium">
-            <a href="#" className="hover:text-[#F6F1EB] transition-colors">Product</a>
-            <a href="#" className="hover:text-[#F6F1EB] transition-colors">Teams</a>
-            <a href="#" className="hover:text-[#F6F1EB] transition-colors">Resources</a>
-            <a href="#" className="text-[#F6F1EB]">Community</a>
-            <a href="#" className="hover:text-[#F6F1EB] transition-colors">Support</a>
-            <a href="#" className="hover:text-[#F6F1EB] transition-colors">Enterprise</a>
-            <a href="#" className="hover:text-[#F6F1EB] transition-colors">Pricing</a>
-          </div>
-
-          <div className="flex items-center gap-4 text-sm font-medium">
-            <a href="#" className="text-zinc-400 hover:text-[#F6F1EB] hidden sm:block">Log in</a>
-            <a href="#" className="bg-[#F6F1EB] text-black px-3 py-1.5 rounded-lg hover:bg-zinc-200 transition-colors">Sign up</a>
+          <div className="flex items-center gap-8 text-sm text-zinc-400 font-medium">
+            <Link href="/team" className="hover:text-[#F6F1EB] transition-colors">Team</Link>
+            <Link href="/#our-approach" className="hover:text-[#F6F1EB] transition-colors">Values</Link>
+            <Link href="/community" className="text-[#F6F1EB]">Community</Link>
           </div>
         </div>
       </nav>
@@ -52,11 +43,11 @@ export default function CommunityPage() {
             </h1>
 
             {/* Subheadline */}
-            <p className="text-lg text-zinc-400 font-normal leading-relaxed max-w-lg">
+            <p className="text-base font-light text-[#F6F1EB]/70 leading-[1.9] max-w-lg">
               Local and online gatherings for Muslim women committed to faith-led financial growth, honest conversations, and collective barakah.
             </p>
 
-            <ul className="space-y-3 text-lg text-zinc-400 font-normal">
+            <ul className="space-y-3 text-sm font-light text-[#F6F1EB]/70 leading-[1.9]">
               <li className="flex items-center gap-3">
                 <Calendar className="w-5 h-5 text-[#F6F1EB]" />
                 <span>Attend intimate, values-aligned meetups</span>
@@ -136,8 +127,8 @@ export default function CommunityPage() {
             <div className="aspect-[4/3] w-full rounded-2xl overflow-hidden mb-6 border border-white/10 relative">
               <Image src="/images/sessions/circle.jpeg" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Circle Conversations" width={800} height={600} />
             </div>
-            <h3 className="text-xl font-medium text-[#F6F1EB] mb-2">Circle Conversations</h3>
-            <p className="text-zinc-400 text-base leading-relaxed">
+            <h3 className="text-xl font-normal text-[#F6F1EB] tracking-tight mb-2">Circle Conversations</h3>
+            <p className="text-sm font-light text-[#F6F1EB]/70 leading-[1.9]">
               Small, facilitated discussions where women speak openly about money, goals, and challenges — without shame or comparison.
             </p>
           </div>
@@ -147,8 +138,8 @@ export default function CommunityPage() {
             <div className="aspect-[4/3] w-full rounded-2xl overflow-hidden mb-6 border border-white/10 relative">
               <Image src="/images/sessions/foundations-of-wealth.jpeg" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Learning Sessions" width={800} height={600} />
             </div>
-            <h3 className="text-xl font-medium text-[#F6F1EB] mb-2">Learning Sessions</h3>
-            <p className="text-zinc-400 text-base leading-relaxed">
+            <h3 className="text-xl font-normal text-[#F6F1EB] tracking-tight mb-2">Learning Sessions</h3>
+            <p className="text-sm font-light text-[#F6F1EB]/70 leading-[1.9]">
               Practical workshops on halal investing, budgeting, business, and financial planning — grounded in Islamic principles.
             </p>
           </div>
@@ -158,8 +149,8 @@ export default function CommunityPage() {
             <div className="aspect-[4/3] w-full rounded-2xl overflow-hidden mb-6 border border-white/10 relative">
               <Image src="/images/sessions/markets.jpeg" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Guest Conversations" width={800} height={600} />
             </div>
-            <h3 className="text-xl font-medium text-[#F6F1EB] mb-2">Guest Conversations</h3>
-            <p className="text-zinc-400 text-base leading-relaxed">
+            <h3 className="text-xl font-normal text-[#F6F1EB] tracking-tight mb-2">Guest Conversations</h3>
+            <p className="text-sm font-light text-[#F6F1EB]/70 leading-[1.9]">
               Thoughtful talks with scholars, professionals, and practitioners bridging deen and dunya with clarity and humility.
             </p>
           </div>
@@ -174,7 +165,7 @@ export default function CommunityPage() {
               Support for <br />
               Rizq Sistas Hosts
             </h2>
-            <p className="text-zinc-400 text-lg leading-relaxed max-w-xl">
+            <p className="text-base font-light text-[#F6F1EB]/70 leading-[1.9] max-w-xl">
               We support women who open space for others — with structure, guidance, and intention.
             </p>
           </div>
@@ -190,8 +181,8 @@ export default function CommunityPage() {
             <div className="aspect-[16/9] w-full rounded-2xl overflow-hidden mb-5 border border-white/10">
               <Image src="/images/approach/tools-for-action.jpeg" className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" alt="Resources" width={800} height={450} />
             </div>
-            <h3 className="text-lg font-medium text-[#F6F1EB] mb-1">Free resources for hosts</h3>
-            <p className="text-zinc-400 text-base">Access discussion prompts, facilitation guides, and community principles to help you host with confidence.</p>
+            <h3 className="text-lg font-normal text-[#F6F1EB] tracking-tight mb-1">Free resources for hosts</h3>
+            <p className="text-sm font-light text-[#F6F1EB]/70 leading-[1.9]">Access discussion prompts, facilitation guides, and community principles to help you host with confidence.</p>
           </div>
 
           {/* Support Item 2 */}
@@ -199,8 +190,8 @@ export default function CommunityPage() {
             <div className="aspect-[16/9] w-full rounded-2xl overflow-hidden mb-5 border border-white/10">
               <Image src="/images/approach/image01.jpg" className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" alt="Guidance" width={800} height={450} />
             </div>
-            <h3 className="text-lg font-medium text-[#F6F1EB] mb-1">Guidance & planning support</h3>
-            <p className="text-zinc-400 text-base">From setting the tone to structuring sessions, we help you create gatherings that feel purposeful and welcoming.</p>
+            <h3 className="text-lg font-normal text-[#F6F1EB] tracking-tight mb-1">Guidance & planning support</h3>
+            <p className="text-sm font-light text-[#F6F1EB]/70 leading-[1.9]">From setting the tone to structuring sessions, we help you create gatherings that feel purposeful and welcoming.</p>
           </div>
 
           {/* Support Item 3 */}
@@ -208,8 +199,8 @@ export default function CommunityPage() {
             <div className="aspect-[16/9] w-full rounded-2xl overflow-hidden mb-5 border border-white/10">
               <Image src="/images/sessions/rizq-circle.jpeg" className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" alt="Community Standards" width={800} height={450} />
             </div>
-            <h3 className="text-lg font-medium text-[#F6F1EB] mb-1">Community standards</h3>
-            <p className="text-zinc-400 text-base">All gatherings are rooted in adab, trust, and shared values — ensuring safe, respectful spaces for learning and growth.</p>
+            <h3 className="text-lg font-normal text-[#F6F1EB] tracking-tight mb-1">Community standards</h3>
+            <p className="text-sm font-light text-[#F6F1EB]/70 leading-[1.9]">All gatherings are rooted in adab, trust, and shared values — ensuring safe, respectful spaces for learning and growth.</p>
           </div>
 
         </div>
@@ -247,9 +238,9 @@ export default function CommunityPage() {
           <div className="max-w-xl mx-auto bg-[#0a0a0a] border border-white/10 rounded-3xl p-8 shadow-2xl relative">
             <div className="mb-6">
               <PenTool className="w-6 h-6 text-[#F6F1EB] mb-4" />
-              <h3 className="text-2xl font-medium text-[#F6F1EB] mb-2">Host a Rizq Sistas Gathering</h3>
-              <p className="text-zinc-400 text-sm mb-2">If you feel called to bring women together in your city or community, we&apos;d love to support you.</p>
-              <p className="text-zinc-400 text-sm">You don&apos;t need to be an expert — just grounded, intentional, and committed to creating space for growth.</p>
+              <h3 className="text-2xl font-normal text-[#F6F1EB] tracking-tight mb-2">Host a Rizq Sistas Gathering</h3>
+              <p className="text-sm font-light text-[#F6F1EB]/70 leading-[1.9] mb-2">If you feel called to bring women together in your city or community, we&apos;d love to support you.</p>
+              <p className="text-sm font-light text-[#F6F1EB]/70 leading-[1.9]">You don&apos;t need to be an expert — just grounded, intentional, and committed to creating space for growth.</p>
             </div>
 
             <form className="space-y-4">
@@ -298,77 +289,83 @@ export default function CommunityPage() {
           </div>
 
           {/* Footer Links */}
-          <div className="max-w-[1400px] mx-auto mt-24 pt-10 border-t border-white/10 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-10 text-xs">
-            
-            <div className="col-span-2 md:col-span-2 lg:col-span-2 pr-10">
-              <Image 
-                src="/logo/logo.png" 
-                alt="Rizq Sistas Logo" 
-                width={40} 
-                height={40} 
-                className="w-10 h-10 mb-6"
-              />
-              <div className="flex gap-4 mb-4">
-                <a href="#" className="text-zinc-500 hover:text-[#F6F1EB]"><Twitter className="w-4 h-4" /></a>
-                <a href="#" className="text-zinc-500 hover:text-[#F6F1EB]"><Instagram className="w-4 h-4" /></a>
-                <a href="#" className="text-zinc-500 hover:text-[#F6F1EB]"><Youtube className="w-4 h-4" /></a>
+          <div className="max-w-[1400px] mx-auto mt-24">
+            {/* Top Section */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-12 lg:gap-8 mb-20">
+              {/* Left Text */}
+              <div className="lg:col-span-4 pr-12">
+                <p className="text-[10px] uppercase tracking-[0.3em] text-[#C25E30] font-medium mb-4">
+                  Educate. Connect. Prepare.
+                </p>
+                <p className="text-base font-light text-[#F6F1EB]/80 italic font-playfair mb-4">
+                  Stewarding rizq, together.
+                </p>
+                <p className="text-xs text-[#F6F1EB]/50">
+                  UK-founded · Global community
+                </p>
               </div>
-              <div className="text-zinc-600 mb-2">
-                © 2025 Rizq Sistas.
+              
+              {/* Links Cols */}
+              <div className="lg:col-span-2">
+                <h5 className="text-[11px] uppercase tracking-widest text-[#C25E30] mb-8">About</h5>
+                <ul className="space-y-3">
+                  <li><Link href="/#why-we-exist" className="text-sm font-light text-[#F6F1EB]/70 hover:text-[#F6F1EB] transition-colors">Why We Exist</Link></li>
+                  <li><Link href="/#our-approach" className="text-sm font-light text-[#F6F1EB]/70 hover:text-[#F6F1EB] transition-colors">Our Approach</Link></li>
+                  <li><Link href="/#what-we-offer" className="text-sm font-light text-[#F6F1EB]/70 hover:text-[#F6F1EB] transition-colors">What We Offer</Link></li>
+                  <li><Link href="/#events" className="text-sm font-light text-[#F6F1EB]/70 hover:text-[#F6F1EB] transition-colors">Contact</Link></li>
+                </ul>
               </div>
-              <div className="text-zinc-600 leading-relaxed">
-                A women-led community building financial clarity, confidence, and barakah — together.
-                <br /><br />
-                Grounded in faith.<br />
-                Guided by intention.<br />
-                Strengthened through sisterhood.
+              <div className="lg:col-span-2">
+                <h5 className="text-[11px] uppercase tracking-widest text-[#C25E30] mb-8">Workshop Strands</h5>
+                <ul className="space-y-3">
+                  <li><Link href="/#events" className="text-sm font-light text-[#F6F1EB]/70 hover:text-[#F6F1EB] transition-colors">Financial Foundations</Link></li>
+                  <li><Link href="/#events" className="text-sm font-light text-[#F6F1EB]/70 hover:text-[#F6F1EB] transition-colors">Halal Investing 101</Link></li>
+                  <li><Link href="/#events" className="text-sm font-light text-[#F6F1EB]/70 hover:text-[#F6F1EB] transition-colors">Barakah-Led Entrepreneurship</Link></li>
+                  <li><Link href="/#events" className="text-sm font-light text-[#F6F1EB]/70 hover:text-[#F6F1EB] transition-colors">Community & Network</Link></li>
+                </ul>
+              </div>
+              <div className="lg:col-span-2">
+                <h5 className="text-[11px] uppercase tracking-widest text-[#C25E30] mb-8">What We Offer</h5>
+                <ul className="space-y-3">
+                  <li><Link href="/#what-we-offer" className="text-sm font-light text-[#F6F1EB]/70 hover:text-[#F6F1EB] transition-colors">Readiness Workshops</Link></li>
+                  <li><Link href="/#what-we-offer" className="text-sm font-light text-[#F6F1EB]/70 hover:text-[#F6F1EB] transition-colors">Tools & Frameworks</Link></li>
+                  <li><Link href="/#what-we-offer" className="text-sm font-light text-[#F6F1EB]/70 hover:text-[#F6F1EB] transition-colors">Community Circles</Link></li>
+                  <li><Link href="/#what-we-offer" className="text-sm font-light text-[#F6F1EB]/70 hover:text-[#F6F1EB] transition-colors">Retreats & Experiences</Link></li>
+                </ul>
+              </div>
+              <div className="lg:col-span-2">
+                <h5 className="text-[11px] uppercase tracking-widest text-[#C25E30] mb-8">Connect</h5>
+                <ul className="space-y-3">
+                  <li><Link href="/#events" className="text-sm font-light text-[#F6F1EB]/70 hover:text-[#F6F1EB] transition-colors">Events</Link></li>
+                  <li><Link href="/community" className="text-sm font-light text-[#F6F1EB]/70 hover:text-[#F6F1EB] transition-colors">Join Community</Link></li>
+                  <li><Link href="/#resources" className="text-sm font-light text-[#F6F1EB]/70 hover:text-[#F6F1EB] transition-colors">Resources</Link></li>
+                </ul>
               </div>
             </div>
-
-            <div className="space-y-3">
-              <h4 className="font-semibold text-[#F6F1EB]">Product</h4>
-              <ul className="space-y-2 text-zinc-500">
-                <li><a href="#" className="hover:text-[#F6F1EB]">AI</a></li>
-                <li><a href="#" className="hover:text-[#F6F1EB]">Design</a></li>
-                <li><a href="#" className="hover:text-[#F6F1EB]">Publish</a></li>
-                <li><a href="#" className="hover:text-[#F6F1EB]">CMS</a></li>
-                <li><a href="#" className="hover:text-[#F6F1EB]">Scale</a></li>
-              </ul>
+        
+            {/* Big Text */}
+            <div className="mb-10 overflow-visible">
+              <h1 className="text-[12.5vw] leading-none uppercase select-none font-light text-[#F6F1EB] tracking-tight font-playfair text-center w-full">
+                Rizq Sistas
+              </h1>
             </div>
-
-            <div className="space-y-3">
-              <h4 className="font-semibold text-[#F6F1EB]">Compare</h4>
-              <ul className="space-y-2 text-zinc-500">
-                <li><a href="#" className="hover:text-[#F6F1EB]">Figma</a></li>
-                <li><a href="#" className="hover:text-[#F6F1EB]">Webflow</a></li>
-                <li><a href="#" className="hover:text-[#F6F1EB]">Wordpress</a></li>
-                <li><a href="#" className="hover:text-[#F6F1EB]">Squarespace</a></li>
-                <li><a href="#" className="hover:text-[#F6F1EB]">Wix</a></li>
-              </ul>
+        
+            {/* Divider & Bottom */}
+            <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+              <div className="flex gap-8">
+                <Link href="#" className="text-xs text-[#F6F1EB]/60 hover:text-[#F6F1EB]">Privacy Policy</Link>
+                <Link href="#" className="text-xs text-[#F6F1EB]/60 hover:text-[#F6F1EB]">Terms of Use</Link>
+              </div>
+              <div className="text-xs text-[#F6F1EB]/60">
+                © Rizq Sistas
+              </div>
+              <div className="flex gap-8">
+                <Link href="#" className="text-xs text-[#F6F1EB]/60 hover:text-[#F6F1EB]">Facebook</Link>
+                <Link href="#" className="text-xs text-[#F6F1EB]/60 hover:text-[#F6F1EB]">Twitter</Link>
+                <Link href="#" className="text-xs text-[#F6F1EB]/60 hover:text-[#F6F1EB]">LinkedIn</Link>
+                <Link href="#" className="text-xs text-[#F6F1EB]/60 hover:text-[#F6F1EB]">Instagram</Link>
+              </div>
             </div>
-
-            <div className="space-y-3">
-              <h4 className="font-semibold text-[#F6F1EB]">Resources</h4>
-              <ul className="space-y-2 text-zinc-500">
-                <li><a href="#" className="hover:text-[#F6F1EB]">Templates</a></li>
-                <li><a href="#" className="hover:text-[#F6F1EB]">Plugins</a></li>
-                <li><a href="#" className="hover:text-[#F6F1EB]">Vectors</a></li>
-                <li><a href="#" className="hover:text-[#F6F1EB]">Marketplace</a></li>
-                <li><a href="#" className="hover:text-[#F6F1EB]">Downloads</a></li>
-              </ul>
-            </div>
-
-            <div className="space-y-3">
-              <h4 className="font-semibold text-[#F6F1EB]">Company</h4>
-              <ul className="space-y-2 text-zinc-500">
-                <li><a href="#" className="hover:text-[#F6F1EB]">Meetups</a></li>
-                <li><a href="#" className="hover:text-[#F6F1EB]">Careers</a></li>
-                <li><a href="#" className="hover:text-[#F6F1EB]">Security</a></li>
-                <li><a href="#" className="hover:text-[#F6F1EB]">Privacy</a></li>
-                <li><a href="#" className="hover:text-[#F6F1EB]">Terms</a></li>
-              </ul>
-            </div>
-
           </div>
         </div>
       </section>

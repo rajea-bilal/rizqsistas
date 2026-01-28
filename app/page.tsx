@@ -50,9 +50,6 @@ export default function HomePage() {
               <Link href="/community" className="inline-flex items-center text-[10px] uppercase hover:opacity-70 transition-opacity font-medium text-[#F2F4EF] tracking-[0.2em] border-[#C25E30] border-b pb-1">
                 Join the Community
               </Link>
-              <Link href="/community" className="inline-flex items-center text-[10px] font-medium uppercase tracking-[0.2em] text-[#8F9E85] hover:text-[#F2F4EF] transition-colors">
-                Explore Events
-              </Link>
             </div>
           </div>
         </div>
