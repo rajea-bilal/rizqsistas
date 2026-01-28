@@ -42,14 +42,14 @@ export default function DynamicNav() {
       
       <nav className="hidden md:flex space-x-8 text-[11px] font-semibold tracking-[0.2em] uppercase">
         <Link 
-          href="#" 
+          href="/team" 
           className={`pb-1 transition-all duration-200 ${
             isScrolled 
               ? 'hover:text-black hover:border-b hover:border-neutral-300' 
               : 'hover:text-white hover:border-b hover:border-white/30'
           }`}
         >
-          Philosophy
+          Team
         </Link>
         <Link 
           href="#" 

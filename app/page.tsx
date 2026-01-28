@@ -9,14 +9,22 @@ export default function HomePage() {
       <DynamicNav />
 
       {/* Hero Section */}
-      <section className="grid grid-cols-1 lg:grid-cols-12 min-h-screen">
-        {/* Left Text Content */}
-        <div className="col-span-1 lg:col-span-5 relative flex flex-col justify-center px-8 py-24 lg:px-16 overflow-hidden bg-[#1A2118]">
-          {/* Gradient Background */}
-          <div className="z-0 bg-gradient-to-bl from-[#2F3A25] to-[#1A2118] absolute top-0 right-0 bottom-0 left-0"></div>
-          
-          {/* Content */}
-          <div className="relative z-10 w-full">
+      <section className="relative min-h-screen flex items-center">
+        {/* Background Image */}
+        <Image 
+          src="/images/hero/hero-single.jpeg" 
+          alt="Rizq Sistas Community" 
+          fill
+          className="object-cover grayscale"
+          priority
+        />
+        
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1A2118] via-[#1A2118]/90 to-transparent"></div>
+        
+        {/* Content */}
+        <div className="relative z-10 w-full px-8 lg:px-16 py-24">
+          <div className="max-w-xl">
             <h1 className="lg:text-6xl xl:text-7xl leading-[0.9] text-7xl font-normal text-[#F2F4EF] tracking-tight font-playfair mb-8">
               Rizq Sistas
             </h1>
@@ -46,16 +54,6 @@ export default function HomePage() {
                 Explore Events
               </Link>
             </div>
-          </div>
-        </div>
-        
-        {/* Right Image Grid */}
-        <div className="col-span-1 lg:col-span-7 grid grid-cols-2 h-[50vh] lg:h-auto">
-          <div className="relative h-full bg-neutral-300 overflow-hidden border-r border-white/10">
-            <Image src="/images/hero/backs.jpg" alt="Rizq Sistas Member" className="hover:scale-105 transition-transform duration-700 opacity-80 w-full h-full object-cover absolute top-0 right-0 bottom-0 left-0 grayscale" width={800} height={600} />
-          </div>
-          <div className="relative h-full bg-neutral-200 overflow-hidden">
-            <Image src="/images/hero/hike.jpg" alt="Collaborative Work" className="hover:scale-105 transition-transform duration-700 opacity-80 w-full h-full object-cover absolute top-0 right-0 bottom-0 left-0 grayscale" width={800} height={600} />
           </div>
         </div>
       </section>
